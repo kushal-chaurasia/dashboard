@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <style>
+       h4 {
+            display: inline;
+            padding: 2.5%;
+        }
+
+        .content {
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  <script src="js/index.js"></script>
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <div class="container my-3">
+    <div class="alert alert-info" role="alert">
+      <center>
+        <h3>Dashboard</h3>
+      </center>
+    </div>
+    <br>
+    <div class="charts">
+      <canvas id="myChart" aria-label="chart" width="300" height="300"></canvas>
+ 
+    </div>
+    
+    
+    <div class="alert alert-primary my-3" role="alert">
+      <a class="link" href="#" rel="div1">
+          <h4><span class="badge badge-info">All transaction </span></h4>
+      </a>
+
+      <a class="link" href="#" rel="div2">
+          <h4><span class="badge badge-info">Successful transaction</span></h4>
+      </a>
+      <a class="link" href="#" rel="div3">
+          <h4><span class="badge badge-info">Failed transaction</span></h4>
+      </a>
+  </div>
+  <section>
+    <div class="content" id="div1">
+      <div class="alert alert-light" role="alert">
+        <h5>Total transaction</h5>
+        <br>
+        <table id="all-data" class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>Email </th>
+              <th>Category</th>
+              <th>Amount</th>
+  
+            </tr>
+          </thead>
+          <tbody>
+  
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+  <div class="content" id="div2">
+    <div class="alert alert-light" role="alert">
+      <h5>Successful transaction</h5>
+      <br>
+      <table id="sucess-data" class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email </th>
+            <th>Category</th>
+            <th>Amount</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content" id="div3">
+    <div class="alert alert-light" role="alert">
+      <h5>Failed transaction</h5>
+      <br>
+      <table id="fail-data" class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email </th>
+            <th>Category</th>
+            <th>Amount</th>
+
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+
+
+  </div>
+  </section>
+
+    
+   
+    
+    
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="js/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+    <script>
+  
+       $('.link').click(function (e) {
+            e.preventDefault();
+            var content = $(this).attr('rel');
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+            $('.content').hide();
+            $('#' + content).show();
+        });
+
+    </script>
+</body>
+
+</html>
