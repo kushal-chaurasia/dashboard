@@ -23,33 +23,34 @@
     <link rel="stylesheet" href="style.css">
   <script src="js/index.js"></script>
 
-  <title>Dashboard</title>
+<title>Admin Dashboard</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container my-3">
-    <div class="alert alert-info" role="alert">
-      <center>
-        <h3>Dashboard</h3>
-      </center>
-    </div>
+  
+    <div class="col-md-9 ">
+        <div class="gradient-border" id="box" >
+        <h1>Admin Dashboard</h1>
+        </div>
     <br>
-    <div class="charts">
+    <div class="charts" style="margin-left: 590px;">
       <canvas id="myChart" aria-label="chart" width="300" height="300"></canvas>
  
     </div>
     
     
-    <div class="alert alert-primary my-3" role="alert">
+   <div class="container my-3">
+    
       <a class="link" href="#" rel="div1">
-          <h4><span class="badge badge-info">All transaction </span></h4>
+          <button type="button" class="btn btn-primary" >Total transaction</button>
       </a>
 
       <a class="link" href="#" rel="div2">
-          <h4><span class="badge badge-info">Successful transaction</span></h4>
+          <button type="button" class="btn btn-success">Successful transaction</button>
       </a>
       <a class="link" href="#" rel="div3">
-          <h4><span class="badge badge-info">Failed transaction</span></h4>
+          <button type="button" class="btn btn-warning">Failed transaction</button>
       </a>
   </div>
   <section>
