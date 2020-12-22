@@ -3,7 +3,7 @@
 const alldata = document.querySelector("#all-data > tbody");
 function loadData() {
     const request = new XMLHttpRequest();
-    request.open("get", "http://127.0.0.1:8000/dashboard/api/userlist/");
+    request.open("get", "https://d1cl7xhtppugmt.cloudfront.net/dashboard/api/userlist/");
     request.onload = () => {
         try {
             const json = JSON.parse(request.responseText);
@@ -31,7 +31,7 @@ function populateAllData(json) {
 const successdata = document.querySelector("#success-data > tbody");
 function sucessData() {
     const request = new XMLHttpRequest();
-    request.open("get", "http://127.0.0.1:8000/dashboard/api/success/");
+    request.open("get", "https://d1cl7xhtppugmt.cloudfront.net/dashboard/api/success/");
     request.onload = () => {
         try {
             const json = JSON.parse(request.responseText);
@@ -59,7 +59,7 @@ function populateSuccessData(json) {
 const faildata = document.querySelector("#fail-data > tbody");
 function failData() {
     const request = new XMLHttpRequest();
-    request.open("get", "http://127.0.0.1:8000/dashboard/api/fail/");
+    request.open("get", "https://d1cl7xhtppugmt.cloudfront.net/dashboard/api/fail/");
     request.onload = () => {
         try {
             const json = JSON.parse(request.responseText);
@@ -86,4 +86,6 @@ function populateFailData(json) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => { loadData(); successdata(); failData(); })
+loadData();
+sucessData();
+failData();
