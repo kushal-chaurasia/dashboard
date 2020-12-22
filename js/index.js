@@ -86,4 +86,4 @@ function populateFailData(json) {
 }
 
 
-document.addEventListener("DOMContentLoaded", () => { loadData(); successdata(); failData(); })
+document.addEventListener("DOMContentLoaded", () => { loadData(); })
