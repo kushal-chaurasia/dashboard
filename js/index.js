@@ -6,16 +6,16 @@ function loadData() {
     request.open("get", "https://d1cl7xhtppugmt.cloudfront.net/dashboard/api/userlist/");
     request.onload = () => {
         try {
-            const json = JSON.parse(request.responseText);
+            const json = JSON.parse(request.responseText)
             populateAllData(json);
         } catch (e) {
+            console.log(e)
             alert("Something unexpected happened")
         }
     };
     request.send()
 }
 function populateAllData(json) {
-
 
     json.foreach((row) => {
         const tr = document.createElement("tr");

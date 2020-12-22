@@ -21,7 +21,7 @@
         }
     </style>
     <link rel="stylesheet" href="style.css">
-  <script src="js/index.js"></script>
+  <script src="js/index2.js"></script>
 
 <title>Admin Dashboard</title>
  <link rel="stylesheet" href="style.css">
@@ -62,15 +62,21 @@
           <thead>
             <tr>
               <th>Id</th>
-              <th>Name</th>
               <th>Mobile</th>
+              <th>Name</th>
               <th>Email </th>
               <th>Category</th>
+              <th>Address</th>
+              <th>Pin Code</th>
+              <th>Colony</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Subscription</th>
               <th>Amount</th>
   
             </tr>
           </thead>
-          <tbody>
+          <tbody id="success-table">
   
           </tbody>
         </table>
@@ -85,11 +91,17 @@
         <thead>
           <tr>
             <th>Id</th>
-            <th>Name</th>
-            <th>Mobile</th>
-            <th>Email </th>
-            <th>Category</th>
-            <th>Amount</th>
+              <th>Mobile</th>
+              <th>Name</th>
+              <th>Email </th>
+              <th>Category</th>
+              <th>Address</th>
+              <th>Pin Code</th>
+              <th>Colony</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Subscription</th>
+              <th>Amount</th>
 
           </tr>
         </thead>
@@ -146,6 +158,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
     <script>
+      
   
        $('.link').click(function (e) {
             e.preventDefault();
