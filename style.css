@@ -44,7 +44,7 @@
 	}
 }
 
-.styled-table {
+#all-data {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -52,30 +52,135 @@
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.styled-table thead tr {
+
+#all-data thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-.styled-table th,
-.styled-table td {
+#all-data th,
+#all-data td {
     padding: 12px 15px;
 }
 
-.styled-table tbody tr {
+#all-data tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-.styled-table tbody tr:nth-of-type(even) {
+#all-data tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-.styled-table tbody tr:last-of-type {
+#all-data tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
-.styled-table tbody tr.active-row {
+#all-data tbody tr.active-row {
     font-weight: bold;
     color: #009879;
+}
+
+
+#sucess-data {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#sucess-data thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#sucess-data th,
+#sucess-data td {
+    padding: 12px 15px;
+}
+
+#sucess-data tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#sucess-data tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#sucess-data tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#sucess-data tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+#fail-data {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#fail-data thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#fail-data th,
+#fail-data td {
+    padding: 12px 15px;
+}
+
+#fail-data tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#fail-data tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#fail-data tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#fail-data tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.table-responsive{
+	max-height: 30em;
+}
+.table{
+	max-width: 20em;
+}
+
+thead th{
+	position: sticky;
+	top: 0;
+	
+	z-index: 5;
+}
+
+thead th:nth-child(2){
+	position: sticky;
+	top: 0;
+	
+	z-index: 6;
+}
+
+thead td:nth-child(2){
+	position: sticky;
+	top: 0;
+	
+	z-index: 3;
 }

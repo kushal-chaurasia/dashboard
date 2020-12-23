@@ -57,10 +57,15 @@
     <div class="content" id="div1">
       <div class="alert alert-light" role="alert">
         <h5>Total transaction</h5>
-        <br>
-        <table id="all-data" class="table">
+
+        
+
+        <div class="table-responsive">
+          <input type="text" name="" id="myInput" placeholder="Serach name" onkeyup="searchfun()" style="margin-left: 300px;">
+          <input type="text" name="" id="mynum" placeholder="Serach number" onkeyup="searchnum()" style="margin-left: 20px;" >
+        <table id="all-data" class="table1" style="margin-left: 100px;" >
           <thead>
-            <tr>
+            <tr >
               <th>Id</th>
               <th>Mobile</th>
               <th>Name</th>
@@ -76,18 +81,21 @@
   
             </tr>
           </thead>
-          <tbody id="success-table">
-  
-          </tbody>
+
+         
         </table>
+        </div>
       </div>
   </div>
 
   <div class="content" id="div2">
     <div class="alert alert-light" role="alert">
       <h5>Successful transaction</h5>
-      <br>
-      <table id="sucess-data" class="table">
+      <div class="table-responsive" style="height: 600px; width: 1400px;">
+        <div class="table-responsive">
+          <input type="text" name="" id="myInput3" placeholder="Serach name" onkeyup="searchfun3()" style="margin-left: 300px;">
+      
+      <table id="sucess-data" class="table2" style="margin-left: 100px;">
         <thead>
           <tr>
             <th>Id</th>
@@ -110,16 +118,19 @@
         </tbody>
       </table>
     </div>
+    </div>
+    </div>
   </div>
 
   <div class="content" id="div3">
     <div class="alert alert-light" role="alert">
       <h5>Failed transaction</h5>
-      <br>
-      <table id="fail-data" class="table">
+       <div class="table-responsive">
+          <input type="text" name="" id="myInput2" placeholder="Serach name" onkeyup="searchfun2()" style="margin-left: 300px;">
+        <table id="fail-data" class="table1" style="margin-left: 100px;" >
         <thead>
           <tr>
-            <th>Id</th>
+              <th>Id</th>
               <th>Mobile</th>
               <th>Name</th>
               <th>Email </th>
@@ -138,6 +149,7 @@
 
         </tbody>
       </table>
+    </div>
     </div>
 
 
@@ -176,6 +188,120 @@
         });
 
     </script>
+
+    <script type="text/javascript">
+      function searchfun() {
+        let filter=document.getElementById('myInput').value.toUpperCase();
+
+        let mytable=document.getElementById('all-data');
+
+        let tr = mytable.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length; i++){
+
+          let td =tr[i].getElementsByTagName('td')[2];
+
+          if (td){
+            let textvalue=td.textContent || td.innerHTML;
+
+            if(textvalue.toUpperCase().indexOf(filter) > -1){
+              tr[i].style.display = "";
+            }else{
+              tr[i].style.display = "none"; 
+              
+            }
+
+          
+          }
+
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function searchnum() {
+        let filter=document.getElementById('mynum').value.toUpperCase();
+
+        let mytable=document.getElementById('all-data');
+
+        let tr = mytable.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length; i++){
+
+          let td =tr[i].getElementsByTagName('td')[1];
+
+          if (td){
+            let textvalue=td.textContent || td.innerHTML;
+
+            if(textvalue.toUpperCase().indexOf(filter) > -1){
+              tr[i].style.display = "";
+            }else{
+              tr[i].style.display = "none"; 
+              
+            }
+
+          
+          }
+
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      function searchfun2() {
+        let filter2=document.getElementById('myInput2').value.toUpperCase();
+
+        let mytable2=document.getElementById('fail-data');
+
+        let tr = mytable2.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length; i++){
+
+          let td =tr[i].getElementsByTagName('td')[2];
+
+          if (td){
+            let textvalue=td.textContent || td.innerHTML;
+
+            if(textvalue.toUpperCase().indexOf(filter2) > -1){
+              tr[i].style.display = "";
+            }else{
+              tr[i].style.display = "none"; 
+              
+            }
+
+          
+          }
+
+        }
+      }
+    </script>
+        <script type="text/javascript">
+      function searchfun3() {
+        let filter3=document.getElementById('myInput3').value.toUpperCase();
+
+        let mytable3=document.getElementById('sucess-data');
+
+        let tr = mytable3.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length; i++){
+
+          let td =tr[i].getElementsByTagName('td')[2];
+
+          if (td){
+            let textvalue=td.textContent || td.innerHTML;
+
+            if(textvalue.toUpperCase().indexOf(filter3) > -1){
+              tr[i].style.display = "";
+            }else{
+              tr[i].style.display = "none"; 
+              
+            }
+
+          
+          }
+
+        }
+      }
+    </script>
+
 </body>
 
 </html>
