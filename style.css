@@ -1,18 +1,15 @@
   	@import url('https://fonts.googleapis.com/css?family=Raleway:200');
-body{
-    margin: 0;
-    padding: 0;
-}
+
 
 #box {
-  display: block;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 1507px;
   height: 150px;
   color: white;
   font-family: 'Raleway';
   font-size: 2.5rem;
-  padding-top: 40px;
 }
 .gradient-border {
   --borderWidth: 3px;
@@ -85,39 +82,39 @@ body{
 }
 
 
-#success-data {
+#sucess-data {
     border-collapse: collapse;
-    
+    margin: 25px 0;
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#success-data thead tr {
+#sucess-data thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-#success-data th,
-#success-data td {
+#sucess-data th,
+#sucess-data td {
     padding: 12px 15px;
 }
 
-#success-data tbody tr {
+#sucess-data tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-#success-data tbody tr:nth-of-type(even) {
+#sucess-data tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-#success-data tbody tr:last-of-type {
+#sucess-data tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
-#success-data tbody tr.active-row {
+#sucess-data tbody tr.active-row {
     font-weight: bold;
     color: #009879;
 }

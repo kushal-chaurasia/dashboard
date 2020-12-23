@@ -28,13 +28,11 @@
 </head>
 
 <body>
-  <header>
-    <div class="gradient-border" id="box" >
-      <center><h1>Admin Dashboard</h1></center>
-      </div>
-  </header>
+  
     <div class="col-md-9 ">
-        
+        <div class="gradient-border" id="box" >
+        <h1>Admin Dashboard</h1>
+        </div>
     <br>
     <div class="charts" style="margin-left: 590px;">
       <canvas id="myChart" aria-label="chart" width="300" height="300"></canvas>
@@ -62,10 +60,10 @@
 
         
 
-        <div class="container">
+        <div class="table-responsive" style="width: 1470px;">
           <input type="text" name="" id="myInput" placeholder="Serach name" onkeyup="searchfun()" style="margin-left: 300px;">
           <input type="text" name="" id="mynum" placeholder="Serach number" onkeyup="searchnum()" style="margin-left: 20px;" >
-        <table id="all-data" class="table1" style="margin-left: 15px;" >
+        <table id="all-data" class="table1"  >
           <thead>
             <tr >
               <th>Id</th>
@@ -78,6 +76,7 @@
               <th>Colony</th>
               <th>State</th>
               <th>Country</th>
+              <th>Created_at</th>
               <th>Subscription</th>
               <th>Amount</th>
   
@@ -93,11 +92,11 @@
   <div class="content" id="div2">
     <div class="alert alert-light" role="alert">
       <h5>Successful transaction</h5>
-      <div class="container" >
-        <div class="container">
-          <input type="text" name="" id="myInput3" placeholder="Serach name" onkeyup="searchfun3()" style="margin-left: 10px;">
+      <div class="table-responsive" style="width: 1470px;">
+        <div class="table-responsive">
+          <input type="text" name="" id="myInput3" placeholder="Serach name" onkeyup="searchfun3()" style="margin-left: 300px;">
       
-      <table id="success-data" class="table2 my-3" style="margin-left: 10px;">
+      <table id="sucess-data" class="table2">
         <thead>
           <tr>
             <th>Id</th>
@@ -127,10 +126,9 @@
   <div class="content" id="div3">
     <div class="alert alert-light" role="alert">
       <h5>Failed transaction</h5>
-    </div>
-       <div class="container">
-          <input type="text" name="" id="myInput2" placeholder="Serach name" onkeyup="searchfun2()" style="margin-left: 20px;">
-        <table id="fail-data" class="table1 " style="margin-left: 25px;" >
+       <div class="table-responsive" style="width: 1470px;">
+          <input type="text" name="" id="myInput2" placeholder="Serach name" onkeyup="searchfun2()" style="margin-left: 300px;">
+        <table id="fail-data" class="table1" >
         <thead>
           <tr>
               <th>Id</th>
@@ -143,6 +141,7 @@
               <th>Colony</th>
               <th>State</th>
               <th>Country</th>
+
               <th>Subscription</th>
               <th>Amount</th>
 
@@ -152,7 +151,7 @@
 
         </tbody>
       </table>
-    
+    </div>
     </div>
 
 
