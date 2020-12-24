@@ -9,65 +9,90 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  
-    <style>
-       h4 {
-            display: inline;
-            padding: 2.5%;
-        }
 
-        .content {
-            display: none;
-        }
-    </style>
-    <link rel="stylesheet" href="style.css">
+  <style>
+    h4 {
+      display: inline;
+      padding: 2.5%;
+    }
+
+    .content {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
   <script src="js/index2.js"></script>
 
-<title>Admin Dashboard</title>
- <link rel="stylesheet" href="style.css">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <div class="gradient-border" id="box" >
-      <center><h1>Admin Dashboard</h1></center>
-      </div>
+    <div class="gradient-border" id="box">
+      <center>
+        <h1>Admin Dashboard</h1>
+      </center>
+    </div>
   </header>
-    <div class="col-md-9 ">
-        
+
+
     <br>
     <div class="charts" style="margin-left: 590px;">
       <canvas id="myChart" aria-label="chart" width="300" height="300"></canvas>
- 
+
     </div>
-    
-    
-   <div class="container my-3">
-    
+
+
+    <div class=" my-3">
+
       <a class="link" href="#" rel="div1">
-          <button type="button" class="btn btn-primary" >Total transaction</button>
+        <button type="button" class="btn btn-primary">Total transaction</button>
       </a>
 
       <a class="link" href="#" rel="div2">
-          <button type="button" class="btn btn-success">Successful transaction</button>
+        <button type="button" class="btn btn-success">Successful transaction</button>
       </a>
       <a class="link" href="#" rel="div3">
-          <button type="button" class="btn btn-warning">Failed transaction</button>
+        <button type="button" class="btn btn-warning">Failed transaction</button>
       </a>
-  </div>
-  <section>
-    <div class="content" id="div1">
-      <div class="alert alert-light" role="alert">
-        <h5>Total transaction</h5>
-
-        
-
-        <div class="container">
-          <input type="text" name="" id="myInput" placeholder="Serach name" onkeyup="searchfun()" style="margin-left: 300px;">
-          <input type="text" name="" id="mynum" placeholder="Serach number" onkeyup="searchnum()" style="margin-left: 20px;" >
-        <table id="all-data" class="table1" style="margin-left: 15px;" >
+    </div>
+    <section>
+      <div class="content" id="div1">
+        <div class="alert alert-light" role="alert">
+          <h5>Total transaction</h5>
+        </div>
+        <input type="text" name="" id="myInput" placeholder="Serach name" onkeyup="searchfun()"
+        style="display: inline;margin: 10px;">
+      <input type="text" name="" id="mynum" placeholder="Serach number" onkeyup="searchnum()"
+        style="display: inline;margin: 10px">
+        <table id="all-data" class="table1" style="margin-left: 15px;">
           <thead>
-            <tr >
+            <tr>
+              <th>Id</th>
+              <th>Mobile</th>
+              <th>Name</th>
+              <th>Email </th>
+              <th>Category</th>
+              <th>Address</th>
+              <th>Pin Code</th>
+              <th>Colony</th>
+              <th>State</th>
+              <th>Country</th>
+              <th>Subscription</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="content" id="div2">
+        <div class="alert alert-light" role="alert">
+          <h5>Successful transaction</h5>
+        </div>
+        <input type="text" name="" id="myInput3" placeholder="Serach name" onkeyup="searchfun3()" style="margin: 10px;">
+        <table id="success-data" class="table2" style="margin-left: 15px;">
+          <thead>
+            <tr>
               <th>Id</th>
               <th>Mobile</th>
               <th>Name</th>
@@ -83,56 +108,20 @@
   
             </tr>
           </thead>
-
-         
+          <tbody>
+  
+          </tbody>
         </table>
-        </div>
       </div>
-  </div>
+      <div class="content" id="div3">
+        <div class="alert alert-light" role="alert">
+          <h5>Failed transaction</h5>
+        </div>
+        <input type="text" name="" id="myInput2" placeholder="Serach name" onkeyup="searchfun2()"style="margin: 10px;">
 
-  <div class="content" id="div2">
-    <div class="alert alert-light" role="alert">
-      <h5>Successful transaction</h5>
-      <div class="container" >
-        <div class="container">
-          <input type="text" name="" id="myInput3" placeholder="Serach name" onkeyup="searchfun3()" style="margin-left: 10px;">
-      
-      <table id="success-data" class="table2 my-3" style="margin-left: 10px;">
-        <thead>
-          <tr>
-            <th>Id</th>
-              <th>Mobile</th>
-              <th>Name</th>
-              <th>Email </th>
-              <th>Category</th>
-              <th>Address</th>
-              <th>Pin Code</th>
-              <th>Colony</th>
-              <th>State</th>
-              <th>Country</th>
-              <th>Subscription</th>
-              <th>Amount</th>
-
-          </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-      </table>
-    </div>
-    </div>
-    </div>
-  </div>
-
-  <div class="content" id="div3">
-    <div class="alert alert-light" role="alert">
-      <h5>Failed transaction</h5>
-    </div>
-       <div class="container">
-          <input type="text" name="" id="myInput2" placeholder="Serach name" onkeyup="searchfun2()" style="margin-left: 20px;">
-        <table id="fail-data" class="table1 " style="margin-left: 25px;" >
-        <thead>
-          <tr>
+        <table id="fail-data" class="table1 " style="margin-left: 15px;">
+          <thead>
+            <tr>
               <th>Id</th>
               <th>Mobile</th>
               <th>Name</th>
@@ -145,25 +134,21 @@
               <th>Country</th>
               <th>Subscription</th>
               <th>Amount</th>
+      
+            </tr>
+          </thead>
+          <tbody>
+      
+          </tbody>
+        </table>
+      
+      </div>
+    </section>
 
-          </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-      </table>
-    
-    </div>
 
 
-  </div>
-  </section>
 
-    
-   
-    
-    
-  </div>
+
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -178,132 +163,132 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <script>
-      
-  
-       $('.link').click(function (e) {
-            e.preventDefault();
-            var content = $(this).attr('rel');
-            $('.active').removeClass('active');
-            $(this).addClass('active');
-            $('.content').hide();
-            $('#' + content).show();
-        });
+  <script>
 
-    </script>
 
-    <script type="text/javascript">
-      function searchfun() {
-        let filter=document.getElementById('myInput').value.toUpperCase();
+    $('.link').click(function (e) {
+      e.preventDefault();
+      var content = $(this).attr('rel');
+      $('.active').removeClass('active');
+      $(this).addClass('active');
+      $('.content').hide();
+      $('#' + content).show();
+    });
 
-        let mytable=document.getElementById('all-data');
+  </script>
 
-        let tr = mytable.getElementsByTagName('tr');
+  <script type="text/javascript">
+    function searchfun() {
+      let filter = document.getElementById('myInput').value.toUpperCase();
 
-        for(var i=0; i<tr.length; i++){
+      let mytable = document.getElementById('all-data');
 
-          let td =tr[i].getElementsByTagName('td')[2];
+      let tr = mytable.getElementsByTagName('tr');
 
-          if (td){
-            let textvalue=td.textContent || td.innerHTML;
+      for (var i = 0; i < tr.length; i++) {
 
-            if(textvalue.toUpperCase().indexOf(filter) > -1){
-              tr[i].style.display = "";
-            }else{
-              tr[i].style.display = "none"; 
-              
-            }
+        let td = tr[i].getElementsByTagName('td')[2];
 
-          
+        if (td) {
+          let textvalue = td.textContent || td.innerHTML;
+
+          if (textvalue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+
           }
 
+
         }
+
       }
-    </script>
-    <script type="text/javascript">
-      function searchnum() {
-        let filter=document.getElementById('mynum').value.toUpperCase();
+    }
+  </script>
+  <script type="text/javascript">
+    function searchnum() {
+      let filter = document.getElementById('mynum').value.toUpperCase();
 
-        let mytable=document.getElementById('all-data');
+      let mytable = document.getElementById('all-data');
 
-        let tr = mytable.getElementsByTagName('tr');
+      let tr = mytable.getElementsByTagName('tr');
 
-        for(var i=0; i<tr.length; i++){
+      for (var i = 0; i < tr.length; i++) {
 
-          let td =tr[i].getElementsByTagName('td')[1];
+        let td = tr[i].getElementsByTagName('td')[1];
 
-          if (td){
-            let textvalue=td.textContent || td.innerHTML;
+        if (td) {
+          let textvalue = td.textContent || td.innerHTML;
 
-            if(textvalue.toUpperCase().indexOf(filter) > -1){
-              tr[i].style.display = "";
-            }else{
-              tr[i].style.display = "none"; 
-              
-            }
+          if (textvalue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
 
-          
           }
 
+
         }
+
       }
-    </script>
-    <script type="text/javascript">
-      function searchfun2() {
-        let filter2=document.getElementById('myInput2').value.toUpperCase();
+    }
+  </script>
+  <script type="text/javascript">
+    function searchfun2() {
+      let filter2 = document.getElementById('myInput2').value.toUpperCase();
 
-        let mytable2=document.getElementById('fail-data');
+      let mytable2 = document.getElementById('fail-data');
 
-        let tr = mytable2.getElementsByTagName('tr');
+      let tr = mytable2.getElementsByTagName('tr');
 
-        for(var i=0; i<tr.length; i++){
+      for (var i = 0; i < tr.length; i++) {
 
-          let td =tr[i].getElementsByTagName('td')[2];
+        let td = tr[i].getElementsByTagName('td')[2];
 
-          if (td){
-            let textvalue=td.textContent || td.innerHTML;
+        if (td) {
+          let textvalue = td.textContent || td.innerHTML;
 
-            if(textvalue.toUpperCase().indexOf(filter2) > -1){
-              tr[i].style.display = "";
-            }else{
-              tr[i].style.display = "none"; 
-              
-            }
+          if (textvalue.toUpperCase().indexOf(filter2) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
 
-          
           }
 
+
         }
+
       }
-    </script>
-        <script type="text/javascript">
-      function searchfun3() {
-        let filter3=document.getElementById('myInput3').value.toUpperCase();
+    }
+  </script>
+  <script type="text/javascript">
+    function searchfun3() {
+      let filter3 = document.getElementById('myInput3').value.toUpperCase();
 
-        let mytable3=document.getElementById('sucess-data');
+      let mytable3 = document.getElementById('sucess-data');
 
-        let tr = mytable3.getElementsByTagName('tr');
+      let tr = mytable3.getElementsByTagName('tr');
 
-        for(var i=0; i<tr.length; i++){
+      for (var i = 0; i < tr.length; i++) {
 
-          let td =tr[i].getElementsByTagName('td')[2];
+        let td = tr[i].getElementsByTagName('td')[2];
 
-          if (td){
-            let textvalue=td.textContent || td.innerHTML;
+        if (td) {
+          let textvalue = td.textContent || td.innerHTML;
 
-            if(textvalue.toUpperCase().indexOf(filter3) > -1){
-              tr[i].style.display = "";
-            }else{
-              tr[i].style.display = "none"; 
-              
-            }
+          if (textvalue.toUpperCase().indexOf(filter3) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
 
-          
           }
 
+
         }
+
       }
-    </script>
+    }
+  </script>
 
 </body>
 
