@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1507px;
   height: 150px;
   color: white;
   font-family: 'Raleway';
@@ -82,7 +81,7 @@
 }
 
 
-#sucess-data {
+#success-data {
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -91,30 +90,30 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-#sucess-data thead tr {
+#success-data thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-#sucess-data th,
-#sucess-data td {
+#success-data th,
+#success-data td {
     padding: 12px 15px;
 }
 
-#sucess-data tbody tr {
+#success-data tbody tr {
     border-bottom: 1px solid #dddddd;
 }
 
-#sucess-data tbody tr:nth-of-type(even) {
+#success-data tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
-#sucess-data tbody tr:last-of-type {
+#success-data tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
 }
 
-#sucess-data tbody tr.active-row {
+#success-data tbody tr.active-row {
     font-weight: bold;
     color: #009879;
 }

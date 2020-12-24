@@ -32,7 +32,6 @@ function append_all_data(data) {
             '<td>' + object.pincode + '</td>' +
             '<td>' + object.colony + '</td>' +
             '<td>' + object.country + '</td>' +
-             '<td>' + object.created_at + '</td>' +
             '<td>' + object.subscription + '</td>' +
             '<td>' + object.amount + '</td>';
         table.appendChild(tr);
